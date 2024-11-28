@@ -27,5 +27,21 @@
     sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-modals allow-presentation"
     allow="fullscreen">
 </iframe>
+
+
+    <button id="fullscreenButton">Enter Fullscreen</button>
+
+    <script>
+        document.getElementById('fullscreenButton').addEventListener('click', function () {
+            const iframe = document.getElementById('dataSheet');
+            if (iframe.requestFullscreen) {
+                iframe.requestFullscreen().catch(err => {
+                    console.error(`Error attempting fullscreen: ${err.message}`);
+                });
+            } else {
+                console.error("Fullscreen API is not supported in this browser.");
+            }
+        });
+    </script>
 </body>
 </html>
