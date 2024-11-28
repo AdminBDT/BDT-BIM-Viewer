@@ -23,25 +23,11 @@
     <iframe 
     class="w-100 h-100" 
     id="dataSheet"
-    src="https://script.google.com/macros/s/AKfycbxZRj6ycG_zcwi5f4qy_Ca41EqzkTvYxeexnfanqUDqdneJGhiZ762MVSy8fYHXSECX/exec"
+    src="https://script.google.com/macros/s/AKfycbzEEJukt5-yud7K2uuNIV0QYdQ2_aWz-7VMtQpU_QF_6bplWHOnXfbAGmE-Mv0zR25O/exec"
     sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-modals allow-presentation"
     allow="fullscreen">
 </iframe>
 
 
-    <button id="fullscreenButton">Enter Fullscreen</button>
-
-    <script>
-        document.getElementById('fullscreenButton').addEventListener('click', function () {
-            const iframe = document.getElementById('dataSheet');
-            if (iframe.requestFullscreen) {
-                iframe.requestFullscreen().catch(err => {
-                    console.error(`Error attempting fullscreen: ${err.message}`);
-                });
-            } else {
-                console.error("Fullscreen API is not supported in this browser.");
-            }
-        });
-    </script>
 </body>
 </html>
